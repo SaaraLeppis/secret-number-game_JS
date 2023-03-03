@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black: #2d2d2d;
+  --grey: #5c5c5c;
+  --white: #fffafa;
+  --green: #4faf44;
+  --yellow: #f6eb14;
+  --orange: #ff9526;
+  --red: #ef4423;
+  --blue: #2a3492;
+}
+body {
+  display: flex;
+
+  background-color: var(--black);
+  font-family: "Mulish", sans-serif;
+  justify-content: center;
+}
+.container {
+  padding: 6em 6em;
+  width: 70vw;
+  height: 80vh;
+}
+.upper-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+button {
+  font-family: inherit;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  background-color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover:not(button:disabled) {
+  outline-color: transparent;
+  outline-style: solid;
+  background-color: var(--black);
+  color: var(--white);
+  transition: all ease-in 0.3s;
+  box-shadow: 2px 2px 20px 8px var(--white);
+}
+
+h1 {
+  font-family: "Goblin One", cursive;
+  font-size: 2em;
+  color: var(--white);
+}
+p {
+  color: var(--white);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.hint,
+.result-area span {
+  font-size: 1.4em;
+}
+.guess-area {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+.guess-area h1 {
+  padding: 1em 0;
+}
+.correct-number {
+  background-color: var(--yellow);
+  color: var(--black);
+  width: 100px;
+}
+
+.guess {
+  background: none;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  border: 2px solid var(--white);
+  display: block;
+  outline: none;
+  margin-bottom: 40px;
+}
+.score-area {
+  display: flex;
+  height: 30vh;
+  justify-content: center;
+}
+.check-card {
+  align-items: center;
+  justify-content: center;
+}
+.result-area {
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.check-card,
+.result-area {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 2em 3em;
+    width: 100vw;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 1em;
+  }
+  .hint,
+  .result-area span {
+    font-size: 1.2em;
+  }
+
+  .score-area {
+    flex-direction: column;
+    align-items: center;
+  }
+  .result-area {
+    margin: 20px 0;
+    align-items: center;
+  }
+  .result-area p {
+    padding: 10px 0;
+  }
+}
