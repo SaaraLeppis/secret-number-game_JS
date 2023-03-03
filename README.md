@@ -14,6 +14,8 @@ Game to guess randomly generated number between 1 - 20. Game shows hints and sto
 
 ## Visuals
 
+<img src="./assets/screen_1.png" width="300"/> <img src="./assets/screen_2.png" width="300"/><img src="./assets/screen_3.png" width="300"/>
+
 ## Usage
 
 - insert your guess
